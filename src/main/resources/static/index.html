@@ -1,32 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>ChatBox</title>
 </head>
-        <div id="popup" class="hidden">
+<body>
+    <div id="chatContainer" class="hidden">
+        <div class="chatHeader">
+            <h2>Chat</h2>
+        </div>
+        <div id="chatMessages"></div>
+        <div class="chatInput">
+            <form onsubmit="sendMessage(event)">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div id="popup" class="hidden">
         <div class="popupContent">
             <h2>Digite seu nome:</h2>
             <input type="text" id="usernameInput">
             <button onclick="openChat()">Entrar no Chat</button>
-            </div>
         </div>
-
-<body>
-    <div id="chatContainer" class="hidden"></div>
-        <div class="chatHeader">
-            <h2>ChatBox</h2>
-        </div>
-        <div id="chatMessages"></div>
-        <div class="chatInput">
-            <form onsubmit="sendMessages(event)">
-                <input type="text" id="messageInput" placeholder="Digite sua mensagem">
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-
+    </div>
 </body>
 </html>
