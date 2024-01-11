@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/sockjs.min.js"></script>
+    <script src="./js/stomp.min.js"></script>
+    <script src="./js/index.js"></script>
     <title>ChatBox</title>
 </head>
 <body>
@@ -14,7 +17,7 @@
         <div id="chatMessages"></div>
         <div class="chatInput">
             <form onsubmit="sendMessage(event)">
-                <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+                <label for="messageInput"></label><input type="text" id="messageInput" placeholder="Digite sua mensagem">
                 <button type="submit">Enviar</button>
             </form>
 
@@ -24,7 +27,7 @@
     <div id="popup" class="hidden">
         <div class="popupContent">
             <h2>Digite seu nome:</h2>
-            <input type="text" id="usernameInput">
+            <label for="usernameInput"></label><input type="text" id="usernameInput">
             <button onclick="openChat()">Entrar no Chat</button>
         </div>
     </div>

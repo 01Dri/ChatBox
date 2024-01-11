@@ -11,9 +11,9 @@ public class ChatController
 {
 
     @MessageMapping("/chatMessage")
-    @SendTo("/channel")
-
+    @SendTo("/canal")
     public User sendMessage(User user) {
+        System.out.println(user.toString());
         return user;
     }
 
